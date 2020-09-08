@@ -3,8 +3,8 @@
 #------------------------------------------------
 
 provider "aws" {
-  access_key = var.ACCESS_KEY
-  secret_key = var.SECRET_KEY
+  access_key = "var_access"
+  secret_key = "var_secret"
   region     = var.aws_region
 }
 
