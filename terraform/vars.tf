@@ -26,10 +26,6 @@ variable "vpc_id" {
   description = "Nessesary vpc id"
   default     = "vpc-04a5fcbc2d9d97383"
 }
-variable "count_inst" {
-  description = "Count of instanses"
-  default     = 1
-}
 
 variable "key_acc" {
   description = "key access"
