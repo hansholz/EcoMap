@@ -15,4 +15,4 @@ phases:
     commands:
         - cd terraform
         - terraform init
-        - terraform apply -auto-approve
+        - terraform apply -var="ACCESS_KEY=${ACCESS_KEY}" -var="SECRET_KEY=${SECRET_KEY}" -auto-approve
