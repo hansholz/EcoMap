@@ -10,7 +10,6 @@ phases:
         - mv terraform /usr/bin/
         - cd ..
         - rm -rf install  
-  
   build:
     commands:
         - cd terraform
