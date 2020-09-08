@@ -14,8 +14,8 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    access_key = var.ACCESS_KEY_BK
-    secret_key = var.SECRET_KEY_BK
+    access_key = var.ACCESS_KEY
+    secret_key = var.SECRET_KEY
     bucket     = "ecomap.tfstate"
     key        = "terraform.tfstate"
     region     = "eu-central-1"
