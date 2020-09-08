@@ -14,6 +14,8 @@ phases:
   build:
     commands:
         - cd terraform
-        - terraform init -var="ACCESS_KEY=${ACCESS_KEY}" -var="SECRET_KEY=${SECRET_KEY}"
+        - sed -i 's/var_access/${ACCESS_KEY}/g' ./main.tf
+        - sed -i 's/var_secret/${SECRET_KEY}/g' ./main.tf
+        - terraform init
         - terraform apply -var="ACCESS_KEY=${ACCESS_KEY}" -var="SECRET_KEY=${SECRET_KEY}" -auto-approve
     
