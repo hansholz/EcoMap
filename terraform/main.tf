@@ -55,11 +55,11 @@ resource "aws_elastic_beanstalk_environment" "ecomap_env" {
     name      = "InstanceType"
     value     = var.instance_type
   }
-  setting {
-    namespace = "aws:autoscaling:launchconfiguration"
-    name      = "ImageId"
-    value     = var.ami
-  }
+  #setting {
+  #  namespace = "aws:autoscaling:launchconfiguration"
+  #  name      = "ImageId"
+  #  value     = var.ami
+  #}
   setting {
     namespace = "aws:autoscaling:launchconfiguration"
     name      = "IamInstanceProfile"
