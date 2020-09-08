@@ -87,3 +87,14 @@ resource "aws_elastic_beanstalk_environment" "ecomap_env" {
   }
 }
 
+#------------------------------------------------
+# Variables
+#------------------------------------------------
+
+variable "ACCESS_KEY" {
+  type	= string
+}
+
+variable "SECRET_KEY" {
+  type  = string
+}
