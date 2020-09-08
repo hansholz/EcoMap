@@ -15,6 +15,6 @@ phases:
         - cd terraform
         - sed -i "s/var_access/${ACCESS_KEY}/g" ./main.tf
         - sed -i "s/var_secret/${SECRET_KEY}/g" ./main.tf
-        - terraform init -upgrade
+        - terraform init
         - terraform apply -auto-approve
     
