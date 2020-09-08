@@ -7,7 +7,6 @@ phases:
         - cd install
         - wget https://releases.hashicorp.com/terraform/0.12.7/terraform_0.12.7_linux_amd64.zip
         - unzip terraform_0.12.7_linux_amd64.zip
-        - echo $PATH
         - mv terraform /usr/bin/
         - cd ..
         - rm -rf install  
@@ -16,4 +15,4 @@ phases:
     commands:
         - cd terraform
         - terraform init
-        - terraform apply -auto-approve
+        - terraform apply -var="ACCESS_KEY=${ACCESS_KEY}" -var="SECRET_KEY=${SECRET_KEY}" -auto-approve
