@@ -9,7 +9,7 @@ RUN pip install --upgrade pip
 
 COPY . ./EcoMap
 RUN chown -R apache:apache ./EcoMap
-COPY requirements.txt ./EcoMap
+#COPY requirements.txt ./EcoMap
 RUN pip install --ignore-installed -r ./EcoMap/requirements.txt
 COPY ./httpd_configs/httpd.conf /etc/httpd/conf/
 COPY ./httpd_configs/ecomap.conf /etc/httpd/conf.d/ecomap.conf
