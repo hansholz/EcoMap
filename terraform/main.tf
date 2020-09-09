@@ -5,7 +5,7 @@
 provider "aws" {
   access_key = "var_access"
   secret_key = "var_secret"
-  region     = var.aws_region
+  region     = "eu-central-1"
 }
 
 #------------------------------------------------
@@ -27,7 +27,7 @@ terraform {
 #------------------------------------------------
 
 resource "aws_elastic_beanstalk_application" "ecomap_app" {
-  name = var.app_name
+  name = "ecomap"
   tags = {
     "ita_group" = "Lv-517"
     "Owner"     = "I_Humeniuk"
@@ -37,17 +37,17 @@ resource "aws_elastic_beanstalk_application" "ecomap_app" {
 resource "aws_elastic_beanstalk_environment" "ecomap_env" {
   name                = "ecomap-env"
   application         = aws_elastic_beanstalk_application.ecomap_app.name
-  solution_stack_name = var.solution_stack_name
+  solution_stack_name = "64bit Amazon Linux 2 v3.1.1 running Docker"
 
   setting {
     namespace = "aws:ec2:vpc"
     name      = "VPCId"
-    value     = var.vpc_id
+    value     = "vpc-04a5fcbc2d9d97383"
   }
   setting {
     namespace = "aws:ec2:vpc"
     name      = "Subnets"
-    value     = var.subnet_id
+    value     = "subnet-027514327610029b3"
   }
   setting {
     namespace = "aws:autoscaling:asg"
@@ -57,12 +57,12 @@ resource "aws_elastic_beanstalk_environment" "ecomap_env" {
   setting {
     namespace = "aws:autoscaling:launchconfiguration"
     name      = "SecurityGroups"
-    value     = var.security_group
+    value     = "sg-0afde2e372987b341"
   }
   setting {
     namespace = "aws:autoscaling:launchconfiguration"
     name      = "EC2KeyName"
-    value     = var.key_acc
+    value     = "I_hum_key"
   }
   setting {
     namespace = "aws:autoscaling:launchconfiguration"
