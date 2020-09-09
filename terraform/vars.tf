@@ -2,10 +2,6 @@ variable "aws_region" {
   description = "Region for the Instance"
   default     = "eu-central-1"
 }
-variable "ami" {
-  description = "OS identifier"
-  default     = "ami-0aad2a7b8483ab367"
-}
 
 variable "instance_type" {
   description = "Type of nessesary instance"
