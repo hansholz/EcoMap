@@ -71,11 +71,6 @@ resource "aws_elastic_beanstalk_environment" "ecomap_env" {
   }
   setting {
     namespace = "aws:autoscaling:launchconfiguration"
-    name      = "ImageId"
-    value     = var.ami
-  }
-  setting {
-    namespace = "aws:autoscaling:launchconfiguration"
     name      = "IamInstanceProfile"
     value     = "aws-elasticbeanstalk-ec2-role"
   }
