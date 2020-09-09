@@ -33,7 +33,7 @@ variable "key_acc" {
 }
 
 variable "solution_stack_name" {
-  default = "64bit Amazon Linux 2018.03 v2.9.13 running Python 2.7"
+  default = "64bit Amazon Linux 2 v3.1.1 running Docker"
 }
 
 variable "app_name" {
