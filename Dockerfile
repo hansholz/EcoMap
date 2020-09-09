@@ -6,6 +6,7 @@ RUN amazon-linux-extras install -y epel
 RUN yum -y install git python2-pip python-devel httpd mod_wsgi mysql-devel gcc MySQL-python memcached libxslt-devel libxml2-devel
 RUN pip install --upgrade setuptools
 RUN pip install --upgrade pip
+
 COPY . ./EcoMap
 RUN chown -R apache:apache ./EcoMap
 COPY requirements.txt ./EcoMap
