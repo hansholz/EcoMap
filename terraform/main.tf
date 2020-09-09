@@ -5,7 +5,7 @@
 provider "aws" {
   access_key = "var_access"
   secret_key = "var_secret"
-  region     = var.aws_region
+  region     = "eu-central-1"
 }
 
 #------------------------------------------------
