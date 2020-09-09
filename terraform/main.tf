@@ -67,7 +67,7 @@ resource "aws_elastic_beanstalk_environment" "ecomap_env" {
   setting {
     namespace = "aws:autoscaling:launchconfiguration"
     name      = "InstanceType"
-    value     = var.instance_type
+    value     = "t2.micro"
   }
   setting {
     namespace = "aws:autoscaling:launchconfiguration"
